@@ -1,6 +1,6 @@
-# egg-test
+# egg-demo
 
-say
+egg simple MVC service
 
 ## QuickStart
 
@@ -14,6 +14,8 @@ see [egg docs][egg] for more detail.
 $ npm i
 $ npm run dev
 $ open http://localhost:7001/
+or
+$ open http://localhost:7001/user/test
 ```
 
 ### Deploy
