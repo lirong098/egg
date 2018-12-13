@@ -1,6 +1,6 @@
-# egg-test
+# egg-demo
 
-say
+egg简单的MVC服务框架
 
 ## 快速入门
 
@@ -14,6 +14,8 @@ say
 $ npm i
 $ npm run dev
 $ open http://localhost:7001/
+or
+$ open http://localhost:7001/user/test
 ```
 
 ### 部署
