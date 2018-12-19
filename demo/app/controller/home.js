@@ -4,7 +4,7 @@ const Controller = require('egg').Controller;
 
 class HomeController extends Controller {
   async index() {
-    let code = 200;
+    let code = 201;
     if (this.ctx.query.code) {
       code = this.ctx.query.code;
     }
