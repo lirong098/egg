@@ -10,7 +10,9 @@ class HomeService extends Service {
   async find(code) {
     // const user = await this.ctx.db.query('select * from user where uid = ?', uid);
     const user = await this.getUserInfo(code);
-    if (!user) return false;
+    if (!user) {
+      return false;
+    }
     return user;
   }
   async getUserInfo(code) {
@@ -24,7 +26,9 @@ class HomeService extends Service {
         code: code,
       },
     };
-    if (result.code !== 200) return `url接收的query中的code为${code}`;
+    if (result.code !== 200) {
+      return `url接收的query中的code为${code}`;
+    }
     return result.data;
   }
 }
