@@ -5,7 +5,5 @@ node_js:
 install:
   - cd demo
   - npm i npminstall && npminstall
-script:
-  - npm run ci
 after_script:
   - npminstall codecov && codecov
