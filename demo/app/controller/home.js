@@ -12,7 +12,7 @@ class HomeController extends Controller {
     // this.ctx.body = this.ctx.query;
   }
   async userId() {
-    let id = this.ctx.params.id;
+    const id = this.ctx.params.id;
     this.ctx.body = id;
   }
 }
