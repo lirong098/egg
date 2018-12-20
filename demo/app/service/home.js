@@ -21,7 +21,7 @@ class HomeService extends Service {
         userName: 'leo',
         sex: '0',
         age: 28,
-        code: code
+        code: code,
       },
     };
     if (result.code !== 200) return `url接收的query中的code为${code}`;
