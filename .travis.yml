@@ -3,7 +3,13 @@ language: node_js
 node_js:
   - '8.9.0'
 install:
-  - docker build -t egg-demo .
-  - docker stop egg-demo-s && docker rm egg-demo-s
-  - docker run -d -p 80:7001 --name egg-demo-s egg-demo
+  - npm install
+script:
+  - npm start
+addons:
+  ssh_known_hosts:
+    - 139.224.12.199 #受信主机，你的Linux服务器ip
+branchs:
+  only:
+    - master
 
