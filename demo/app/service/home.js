@@ -27,7 +27,7 @@ class HomeService extends Service {
       },
     };
     if (result.code !== 200) {
-      return `url接收的query中的code为${code}`;
+      return `url接收的query中的code为${code}travis成功了`;
     }
     return result.data;
   }
