@@ -13,5 +13,9 @@ before_install:
     -in id_rsa.enc -out ~/.ssh/id_rsa -d
   - logname
   - ifconfig
+install:
+  - cd demo && npm install
+script:
+  - npm start
 after_success:
   - ssh travis@139.224.12.199 -o StrictHostKeyChecking=no 'cd ~/egg && git pull && chmod 755 build.sh && ./build.sh'   #使用ssh连接服务器
