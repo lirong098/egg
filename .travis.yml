@@ -11,5 +11,7 @@ branchs:
 before_install:
   - openssl aes-256-cbc -K $encrypted_a06631ba4bb8_key -iv $encrypted_a06631ba4bb8_iv
     -in id_rsa.enc -out ~/.ssh/id_rsa -d
+  - logname
+  - ifconfig
 after_success:
   - ssh travis@139.224.12.199 -o StrictHostKeyChecking=no 'cd ~/egg && git pull && chmod 755 build.sh && ./build.sh'   #使用ssh连接服务器
