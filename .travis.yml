@@ -16,6 +16,6 @@ before_install:
 install:
   - cd demo && npm install
 script:
-  - npm start
-after_success:
+  - npm run ci
+after_script:
   - ssh travis@139.224.12.199 -o StrictHostKeyChecking=no 'cd ~/egg && git pull && chmod 755 build.sh && ./build.sh'   #使用ssh连接服务器
