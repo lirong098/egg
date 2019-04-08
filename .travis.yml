@@ -2,10 +2,6 @@ sudo: false
 language: node_js
 node_js:
 - 8.9.0
-install:
-  - npm install
-script:
-  - npm start
 addons:
   ssh_known_hosts:
     - 139.224.12.199 #受信主机，你的Linux服务器ip
